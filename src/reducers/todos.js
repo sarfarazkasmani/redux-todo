@@ -21,20 +21,29 @@ const todos = (state = initialState, action) => {
           ...state.todos.filter((todo) => todo.id !== action.id),
           action.message,
         ],
-
-        // let index = action.index;
-        // todos: [
-        //   ...state.todos.slice(0, action.index),
-        //   { ...state[action.index], todo: action.message },
-        //   ...state.todos.slice(action.index + 1),
-        // ],
-
-        // todos: [
-        //   ...state.todos.map((todo) => {
-        //     if (todo === action.oldtask) todo = action.newtask;
-        //   }),
-        // ],
       };
+    // case "UPDATE_TODO":
+    //   return {
+    //     ...state,
+    //     todos: [
+    //       ...state.todos.filter((todo) => todo.id !== action.id),
+    //       action.message,
+    //     ],
+
+    // let index = action.index;
+    // todos: [
+    //   ...state.todos.slice(0, action.index),
+    //   { ...state[action.index], todo: action.message },
+    //   ...state.todos.slice(action.index + 1),
+    // ],
+
+    // todos: [
+    //   ...state.todos.map((todo) => {
+    //     if (todo === action.oldtask) todo = action.newtask;
+    //   }),
+    // ],
+    // };
+
     default:
       return state;
   }
