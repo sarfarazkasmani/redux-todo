@@ -10,18 +10,6 @@ const TodoList = () => {
     return <TodoItem task={task} />;
   });
 
-  // const renderItem = () => {
-  //   return <div>{taskItems}</div>;
-  // };
-  // const renderForm = () => {
-  //   return (
-  //     <form>
-  //       <input type='text' />
-  //       <button type='submit'>Edit Todo</button>
-  //     </form>
-  //   );
-  // };
-
   return <div>{taskItems}</div>;
 };
 

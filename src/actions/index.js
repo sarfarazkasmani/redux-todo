@@ -10,7 +10,7 @@ export const deleteTodo = (id) => ({
   id,
 });
 
-export const updateTodo = (message, id) => ({
+export const updateTodo = ({ message, id }) => ({
   type: UPDATE_TODO,
   message,
   id,

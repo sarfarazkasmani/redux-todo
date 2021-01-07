@@ -5,10 +5,7 @@ import { deleteTodo, updateTodo } from "../../actions";
 const TodoItem = ({ task }) => {
   const dispatch = useDispatch();
   const [isUpdate, setIsUpdate] = useState(false);
-  // const selectedTask = useSelector((state) =>
-  //   state.todos.todos.find((e) => e.id === task.id)
-  // );
-  // console.log("selectedTask", selectedTask);
+
   function editItemToState(e) {
     e.preventDefault();
 
@@ -26,10 +23,12 @@ const TodoItem = ({ task }) => {
   const renderForm = () => {
     return (
       <form onSubmit={editItemToState}>
-        <input type='text' name='userInput' defaultValue={task.task} />
+        <input type='text' defaultValue={task.task} />
         <button
           type='submit'
-          onClick={() => dispatch(updateTodo({ task: task.message }))}
+          onClick={() =>
+            dispatch(updateTodo({ task: task.message, id: task.id }))
+          }
         >
           Edit Todo
         </button>
